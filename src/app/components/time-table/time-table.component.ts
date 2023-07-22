@@ -1,5 +1,5 @@
 import { Component, Input, OnChanges } from '@angular/core';
-import { timeTableCols } from 'src/app/const/time-table-cols';
+import { Days, timeTableCols } from 'src/app/const/time-table-cols';
 
 @Component({
   selector: 'app-time-table',
@@ -8,8 +8,8 @@ import { timeTableCols } from 'src/app/const/time-table-cols';
 })
 export class TimeTableComponent   {
   @Input() dataSource:any;
-  displayedColumns: string[] = ['timeFrame', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-  days: string[] = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  displayedColumns: string[] = timeTableCols;
+  days: string[] =Days;
     // Function to get the display value for a specific day
   getValueForDay(row: any, day: string): number | null {
     const filteredDataForDay = this.dataSource.find((data:any) => {
@@ -22,7 +22,7 @@ export class TimeTableComponent   {
 
   // Function to get the day name from a Date object
   public getDayOfWeek(date: Date): string {
-    const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const daysOfWeek = this.days;
     return daysOfWeek[date.getDay()];
   }
 }

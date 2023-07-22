@@ -1,8 +1,2 @@
-export const timeTableCols=[
-'Sunday',
-'Monday',
-'Tuesday',
-'Wednesday',
-'Thursday',
-'Friday',
-'Saturday'];
+export const timeTableCols=['timeFrame', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];;
+export const Days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
