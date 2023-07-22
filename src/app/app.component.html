@@ -1,0 +1,8 @@
+<div class="container">
+  <h1 class="title">Table with Date Range Picker</h1>
+  <app-date-range-picker (dateRangeSelected)="onDateRangeSelected($event)"></app-date-range-picker>
+  <div class="table-container">
+    <app-time-table [dataSource]="filteredData$ | async"></app-time-table>
+  </div>
+</div>
+

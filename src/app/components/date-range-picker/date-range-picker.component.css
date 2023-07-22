@@ -1,0 +1,17 @@
+mat-form-field {
+    width: 250px;
+    margin-top: 20px;
+  }
+  
+  .mat-date-range-input {
+    width: 100%;
+  }
+  
+  .mat-datepicker-toggle {
+    margin-top: 8px;
+    margin-left: 5px;
+  }
+  
+  mat-date-range-picker {
+    display: none;
+  }
